@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>排列组合 on 狸猫的写作场所</title>
+    <link>http://localhost:1313/tags/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/</link>
+    <description>Recent content in 排列组合 on 狸猫的写作场所</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 22 Mar 2020 13:31:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>【Some Math】Pascal’s rule</title>
+      <link>http://localhost:1313/2020/03/22/some-mathpascals-rule/</link>
+      <pubDate>Sun, 22 Mar 2020 13:31:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2020/03/22/some-mathpascals-rule/</guid>
+      <description>Pascal’s rule 是说： $$\pmatrix {n-1 \ k } + \pmatrix{n-1 \ k-1} = \pmatrix{n \ k}$$ 排列组合公式计算可验证，在此不必赘述。 这个rule可以有一个很直观的理解：在n个元素中，选</description>
+    </item>
+    
+  </channel>
+</rss>

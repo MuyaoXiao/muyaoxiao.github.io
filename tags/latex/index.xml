@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LaTex on 狸猫的写作场所</title>
+    <link>http://localhost:1313/tags/latex/</link>
+    <description>Recent content in LaTex on 狸猫的写作场所</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 29 Feb 2020 17:31:23 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>「Old Article」LaTeX Beamer做presentation的运用心得</title>
+      <link>http://localhost:1313/2020/02/29/old-articlelatex-beamer%E5%81%9Apresentation%E7%9A%84%E8%BF%90%E7%94%A8%E5%BF%83%E5%BE%97/</link>
+      <pubDate>Sat, 29 Feb 2020 17:31:23 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2020/02/29/old-articlelatex-beamer%E5%81%9Apresentation%E7%9A%84%E8%BF%90%E7%94%A8%E5%BF%83%E5%BE%97/</guid>
+      <description>按：这篇文章写于2018年1月5日 为何使用Beamer Beamer是现在很多学术上slide的通常做法，尽管千篇一律单调乏味，但相比于设计失</description>
+    </item>
+    
+  </channel>
+</rss>

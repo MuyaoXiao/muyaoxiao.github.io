@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>存在主义 on 狸猫的写作场所</title>
+    <link>http://localhost:1313/tags/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89/</link>
+    <description>Recent content in 存在主义 on 狸猫的写作场所</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 16 Feb 2020 09:41:05 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Book Review: 「存在主義咖啡館」：沒有描述就沒有意義</title>
+      <link>http://localhost:1313/2020/02/16/book-review-%E5%AD%98%E5%9C%A8%E4%B8%BB%E7%BE%A9%E5%92%96%E5%95%A1%E9%A4%A8%E6%B2%92%E6%9C%89%E6%8F%8F%E8%BF%B0%E5%B0%B1%E6%B2%92%E6%9C%89%E6%84%8F%E7%BE%A9/</link>
+      <pubDate>Sun, 16 Feb 2020 09:41:05 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2020/02/16/book-review-%E5%AD%98%E5%9C%A8%E4%B8%BB%E7%BE%A9%E5%92%96%E5%95%A1%E9%A4%A8%E6%B2%92%E6%9C%89%E6%8F%8F%E8%BF%B0%E5%B0%B1%E6%B2%92%E6%9C%89%E6%84%8F%E7%BE%A9/</guid>
+      <description>豆瓣頁面：「存在主义咖啡馆」 題材是存在主義哲學家的群像。廁所讀物當中最令我驚訝的一本，引用詳實，而且也不忘對觀念脈絡進行闡述。中文翻譯很流暢</description>
+    </item>
+    
+  </channel>
+</rss>
