@@ -232,14 +232,5 @@
       <description>关于我： 我更愿意什么也不说。 网站的名字是不是更应该叫tanuque，这听起来更🇫🇷。 个人计算机是比智能移动设备伟大得多的发明。 Not to withdraw from the process, but</description>
     </item>
     
-    <item>
-      <title>「IO恐慌」</title>
-      <link>http://localhost:1313/posts/2020-11-22-how-to-io/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/2020-11-22-how-to-io/</guid>
-      <description>我对IO的恐慌由来已久，我学过Java的IO，它告诉我有字节流啦字符流啦然后分为io package以及后来的nio package。What the</description>
-    </item>
-    
   </channel>
 </rss>

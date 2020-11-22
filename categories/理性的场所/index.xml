@@ -70,14 +70,5 @@
       <description>回过头来看，从马尔可夫不等式到大数定律的推导，乃是概率论到统计学的桥梁。过去一直对这里感到迷茫，但其实稍微整理一下就会很清楚： 首先是Mark</description>
     </item>
     
-    <item>
-      <title>「IO恐慌」</title>
-      <link>http://localhost:1313/posts/2020-11-22-how-to-io/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/2020-11-22-how-to-io/</guid>
-      <description>我对IO的恐慌由来已久，我学过Java的IO，它告诉我有字节流啦字符流啦然后分为io package以及后来的nio package。What the</description>
-    </item>
-    
   </channel>
 </rss>
