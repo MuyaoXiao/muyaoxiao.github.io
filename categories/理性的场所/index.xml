@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>理性的场所 on 狸猫的写作场所</title>
+    <link>http://localhost:1313/categories/%E7%90%86%E6%80%A7%E7%9A%84%E5%9C%BA%E6%89%80/</link>
+    <description>Recent content in 理性的场所 on 狸猫的写作场所</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 12 Jul 2020 06:55:25 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/%E7%90%86%E6%80%A7%E7%9A%84%E5%9C%BA%E6%89%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>代替Stack的究竟该是什么</title>
+      <link>http://localhost:1313/2020/07/12/%E4%BB%A3%E6%9B%BFstack%E7%9A%84%E7%A9%B6%E7%AB%9F%E8%AF%A5%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <pubDate>Sun, 12 Jul 2020 06:55:25 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2020/07/12/%E4%BB%A3%E6%9B%BFstack%E7%9A%84%E7%A9%B6%E7%AB%9F%E8%AF%A5%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <description>众所周知，Java当中Stack的实现非常糟糕（至少截至Java 8为止），因为stack和vector的关系应当是composition的关</description>
+    </item>
+    
+    <item>
+      <title>【Some Math】Pascal’s rule</title>
+      <link>http://localhost:1313/2020/03/22/some-mathpascals-rule/</link>
+      <pubDate>Sun, 22 Mar 2020 13:31:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2020/03/22/some-mathpascals-rule/</guid>
+      <description>Pascal’s rule 是说： $$\pmatrix {n-1 \ k } + \pmatrix{n-1 \ k-1} = \pmatrix{n \ k}$$ 排列组合公式计算可验证，在此不必赘述。 这个rule可以有一个很直观的理解：在n个元素中，选</description>
+    </item>
+    
+    <item>
+      <title>鏈接接接平等，但有些鏈接比其他更平等</title>
+      <link>http://localhost:1313/2020/03/06/inequality-of-links/</link>
+      <pubDate>Fri, 06 Mar 2020 15:16:36 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2020/03/06/inequality-of-links/</guid>
+      <description>或許移動互聯網給我們帶來了不愛點鏈接，和不愛在文本中置入鏈接（比如這樣）的瀏覽和寫作習慣。本質上，移動設備中（甚至是移動設備的瀏覽器）鏈接與</description>
+    </item>
+    
+    <item>
+      <title>AA博弈</title>
+      <link>http://localhost:1313/2020/03/01/aa%E5%8D%9A%E5%BC%88/</link>
+      <pubDate>Sun, 01 Mar 2020 04:49:05 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2020/03/01/aa%E5%8D%9A%E5%BC%88/</guid>
+      <description>今天早上在微博上看到這樣一篇自白。敘述的事件主要是： 平时，爱喝奶茶的人都会一起点单。之前大家是按照配送费/人数 自己的奶茶费用，各付各的。这次</description>
+    </item>
+    
+    <item>
+      <title>「Old Article」LaTeX Beamer做presentation的运用心得</title>
+      <link>http://localhost:1313/2020/02/29/old-articlelatex-beamer%E5%81%9Apresentation%E7%9A%84%E8%BF%90%E7%94%A8%E5%BF%83%E5%BE%97/</link>
+      <pubDate>Sat, 29 Feb 2020 17:31:23 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2020/02/29/old-articlelatex-beamer%E5%81%9Apresentation%E7%9A%84%E8%BF%90%E7%94%A8%E5%BF%83%E5%BE%97/</guid>
+      <description>按：这篇文章写于2018年1月5日 为何使用Beamer Beamer是现在很多学术上slide的通常做法，尽管千篇一律单调乏味，但相比于设计失</description>
+    </item>
+    
+    <item>
+      <title>「Old Article」笔记：费马质数检验算法</title>
+      <link>http://localhost:1313/2020/02/29/old-article%E7%AC%94%E8%AE%B0%E8%B4%B9%E9%A9%AC%E8%B4%A8%E6%95%B0%E6%A3%80%E9%AA%8C%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Sat, 29 Feb 2020 17:18:32 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2020/02/29/old-article%E7%AC%94%E8%AE%B0%E8%B4%B9%E9%A9%AC%E8%B4%A8%E6%95%B0%E6%A3%80%E9%AA%8C%E7%AE%97%E6%B3%95/</guid>
+      <description>按：这篇文章写于2018年11月27日 An Algorithm for detecting prime number (Primality Test) 1. Fermat’s Little Theorem and its converse-negative proposition Fermat’s Little Theorem is introduced:If ​ is an integer, and ​ is a prime number, then ​ must be one of</description>
+    </item>
+    
+    <item>
+      <title>从马尔可夫不等式到弱大数定律</title>
+      <link>http://localhost:1313/2020/01/18/%E4%BB%8E%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%88%B0%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B/</link>
+      <pubDate>Sat, 18 Jan 2020 19:15:01 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2020/01/18/%E4%BB%8E%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%88%B0%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B/</guid>
+      <description>回过头来看，从马尔可夫不等式到大数定律的推导，乃是概率论到统计学的桥梁。过去一直对这里感到迷茫，但其实稍微整理一下就会很清楚： 首先是Mark</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>「Old Article」LaTeX Beamer做presentation的运用心得 - 狸猫的写作场所</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Xwithoutcolor" /><meta name="description" content="按：这篇文章写于2018年1月5日 为何使用Beamer Beamer是现在很多学术上slide的通常做法，尽管千篇一律单调乏味，但相比于设计失" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.78.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/2020/02/29/old-articlelatex-beamer%E5%81%9Apresentation%E7%9A%84%E8%BF%90%E7%94%A8%E5%BF%83%E5%BE%97/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b849ba5ac1fe21ea95d3ade5eb638c6dc4f47ba7a1e777915cfa07d08b0bff14.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="「Old Article」LaTeX Beamer做presentation的运用心得" />
+<meta property="og:description" content="按：这篇文章写于2018年1月5日 为何使用Beamer Beamer是现在很多学术上slide的通常做法，尽管千篇一律单调乏味，但相比于设计失" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/2020/02/29/old-articlelatex-beamer%E5%81%9Apresentation%E7%9A%84%E8%BF%90%E7%94%A8%E5%BF%83%E5%BE%97/" />
+<meta property="article:published_time" content="2020-02-29T17:31:23+00:00" />
+<meta property="article:modified_time" content="2020-02-29T17:31:23+00:00" />
+<meta itemprop="name" content="「Old Article」LaTeX Beamer做presentation的运用心得">
+<meta itemprop="description" content="按：这篇文章写于2018年1月5日 为何使用Beamer Beamer是现在很多学术上slide的通常做法，尽管千篇一律单调乏味，但相比于设计失">
+<meta itemprop="datePublished" content="2020-02-29T17:31:23+00:00" />
+<meta itemprop="dateModified" content="2020-02-29T17:31:23+00:00" />
+<meta itemprop="wordCount" content="1582">
+
+
+
+<meta itemprop="keywords" content="LaTex,Slides,幻灯片," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="「Old Article」LaTeX Beamer做presentation的运用心得"/>
+<meta name="twitter:description" content="按：这篇文章写于2018年1月5日 为何使用Beamer Beamer是现在很多学术上slide的通常做法，尽管千篇一律单调乏味，但相比于设计失"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">狸猫的写作场所</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">狸猫的写作场所</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">「Old Article」LaTeX Beamer做presentation的运用心得</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-02-29 </span>
+        <div class="post-category">
+            <a href="/categories/%E7%90%86%E6%80%A7%E7%9A%84%E5%9C%BA%E6%89%80/"> 理性的场所 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#为何使用beamer">为何使用Beamer</a></li>
+        <li><a href="#何为beamer">何为Beamer</a></li>
+        <li><a href="#基本结构">基本结构</a>
+          <ul>
+            <li><a href="#pre">Pre</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#main-body">Main body</a></li>
+          </ul>
+        </li>
+        <li><a href="#说明">说明</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>按：这篇文章写于2018年1月5日</p>
+<h2 id="为何使用beamer">为何使用Beamer</h2>
+<p>Beamer是现在很多学术上slide的通常做法，尽管千篇一律单调乏味，但相比于设计失败的PPT，它稳妥。更重要的是，它方便插入数学公式，如果要展示的东西中有很多数学内容的话，LaTeX Beamer会是一个很好的选择。</p>
+<p>主观上来说，我想要用它的原因，一方面因为我觉得很酷，另一方面很多人都不会用。</p>
+<h2 id="何为beamer">何为Beamer</h2>
+<p>beamer 其实是LaTeX的编译器中常用的一个package，跟我们usepackage里面用的package其实没有什么差别。因此理论上不需要安装别的什么东西，如果编译器使用MiKTeX加上编辑器使用Texmaker（这个基本是Windows平台最常用的LaTeX配置了）的话，按道理来说你按照一般的写法来写的话编译器会自动提示你安装，然后它会自动帮你安装。</p>
+<p>但是昨天我编译的时候它显示error，提示内容是说在「beamer.cls」里面找不到「beamerbasemodes.sty」这个模块，这让我很为难，因为貌似这个cls是相当于一个编译的一个库，它是本身自带的，我没有办法加一个beamerbasemodes.sty进去，我之前还试图网上找了一个「beamerbasemodes.sty」加在这个旁边，但是最终都失败了，依然提示相同的问题。我也搜索了一些之前的问题，最终选择重装MiKTeX，然后就解决了。</p>
+<h2 id="基本结构">基本结构</h2>
+<p>我在YouTube上看了一个beamer的教学，然后对着这个<a href="https://www.latextemplates.com/template/beamer-presentation" target="_blank" rel="noreferrer noopener">beamer的模板</a>来看，然后说说。</p>
+<h3 id="pre">Pre</h3>
+<ul>
+<li>documentclass{beamer}：和平时我们用的ducumentclass是report或者是article不一样。</li>
+<li>mode<presentation>:这个模板给了我们很多的beamer主题，实际上也不用这么写，直接写\usebeamer{某主题}这种形式就可以了。这个模板给的是Madrid这个主题，我感觉各种主题之间其实差别不大。</li>
+<li>usepackage{}，title，author，institute等：这些都是老生常谈了，什么都要用这些。usepackage主要是要有一个graphicx这个添加图片的包。然后后面的这些东西需要注意的是这个institute，一般的LaTeX用不到这个。</li>
+</ul>
+<h3 id="overview">Overview</h3>
+<ul>
+<li>Overview最重要的事情就是要有超链接，如下所示，First Section和Second Section都会链接到后面的相应页面上去。具体的实现结构：</li>
+</ul>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">&lt;br /&gt;\begin{frame}
+ 
+\frametitle{Overview}
+ 
+\tableofcontents
+ 
+\end{frame}
+ 
+&lt;hr /&gt;
+ 
+\section{First Section}
+ 
+\subsection{Subsection}
+ 
+%contents of first section and first subsection
+ 
+&lt;hr /&gt;
+ 
+\section{Second Section}</pre><figure class="wp-block-image size-large">
+<p><img loading="lazy" width="739" height="553" src="https://tanuq.cn/wp-content/uploads/2020/02/time688aae59bbe20180105165951.png" alt="" class="wp-image-290" srcset="https://tanuq.cn/wp-content/uploads/2020/02/time688aae59bbe20180105165951.png 739w, https://tanuq.cn/wp-content/uploads/2020/02/time688aae59bbe20180105165951-300x224.png 300w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 61vw, (max-width: 1362px) 45vw, 600px" /> </figure></p>
+<h3 id="main-body">Main body</h3>
+<ul>
+<li>
+<p>\begin{frame}：这个是最基本的了，一个frame就是这个Slide的一面。</p>
+<ul>
+<li>第一个\begin{frame}的内容一定是\titlepage。就是把上面说得标题啊那些东西全部包括进来。</li>
+<li>在每一页中，\frametitle{text}能够给我们这一页的一个标题，比如上面的的Overview就是这一页的一个标题。</li>
+</ul>
+</li>
+<li>
+<p>itemize, enumerate这样的包都是写report一样的用。</p>
+</li>
+<li>
+<p>框框：在框框里写推论啊之类的东西算是这玩意儿的核心功能之一了吧。写法就是：</p>
+</li>
+<li>
+<p>分栏：又是一个奇淫巧技。在下面这张图的左边是我们要列出的标题，右边是普通的一段话。事实上LaTeX的实现方式就是用\column{.45\textwidth}引着左边的一栏，用\column{.5\textwidth}引着右边的一栏。这样左边一栏就是0.45的页宽，右边一栏就是0.5的页宽。<figure class="wp-block-image"></p>
+</li>
+</ul>
+<p><img src="https://monetshaw.files.wordpress.com/2018/01/time688aae59bbe20180107184158.png?w=739" alt="TIM截图20180107184158" class="wp-image-811" /> </figure></p>
+<ul>
+<li>表格：tabular</li>
+<li>定理之类的：\begin{theorem}[The Name Of The Theorem]</li>
+<li>Code: \begin{example}[The Name Of The Code] \begin{verbatim}</li>
+<li>Ref: 依然是\begin{thebibliography}</li>
+</ul>
+<h2 id="说明">说明</h2>
+<p>其中有很多细微的问题的，包括如何选择主题，包括可以自己设定颜色啊，短标题啊之类一些的东西可以去研究。但是事实上我们平时自己做一个slide根本不用这么费心，把模板 套一套根据一些简单的法则就可以做出人魔狗样的slide了。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Xwithoutcolor</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-02-29
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/latex/">LaTex</a>
+          <a href="/tags/slides/">Slides</a>
+          <a href="/tags/%E5%B9%BB%E7%81%AF%E7%89%87/">幻灯片</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/2020/02/29/old-aticles%E4%B8%80%E4%BA%9B%E6%8A%84%E5%BD%95%E5%90%8D%E5%AD%97%E7%9A%84%E6%81%90%E6%85%8C%E4%B9%A6%E8%A6%81%E5%AF%B9%E6%AF%94%E7%9D%80%E7%9C%8B/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">「Old Article」一些抄录：名字的恐慌（书要对比着看）</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/2020/02/29/old-article%E5%8D%8E%E5%B0%94%E8%A1%97%E8%8B%B1%E8%AF%AD%E6%88%91%E5%9C%A8%E9%95%BF%E5%AE%81%E5%8C%BA%E7%9A%84%E6%B0%B8%E5%8A%AB%E5%9B%9E%E5%BD%92/">
+            <span class="next-text nav-default">「Old Article」华尔街英语：我在长宁区的永劫回归</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:m@tanuq.cn" class="iconfont icon-email" title="email"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>xwithoutcolor</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        tags: 'ams',
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

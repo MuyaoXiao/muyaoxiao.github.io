@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>「Old Article」笔记：费马质数检验算法 - 狸猫的写作场所</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Xwithoutcolor" /><meta name="description" content="按：这篇文章写于2018年11月27日 An Algorithm for detecting prime number (Primality Test) 1. Fermat’s Little Theorem and its converse-negative proposition Fermat’s Little Theorem is introduced:If ​ is an integer, and ​ is a prime number, then ​ must be one of" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.78.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/2020/02/29/old-article%E7%AC%94%E8%AE%B0%E8%B4%B9%E9%A9%AC%E8%B4%A8%E6%95%B0%E6%A3%80%E9%AA%8C%E7%AE%97%E6%B3%95/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b849ba5ac1fe21ea95d3ade5eb638c6dc4f47ba7a1e777915cfa07d08b0bff14.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="「Old Article」笔记：费马质数检验算法" />
+<meta property="og:description" content="按：这篇文章写于2018年11月27日 An Algorithm for detecting prime number (Primality Test) 1. Fermat’s Little Theorem and its converse-negative proposition Fermat’s Little Theorem is introduced:If ​ is an integer, and ​ is a prime number, then ​ must be one of" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/2020/02/29/old-article%E7%AC%94%E8%AE%B0%E8%B4%B9%E9%A9%AC%E8%B4%A8%E6%95%B0%E6%A3%80%E9%AA%8C%E7%AE%97%E6%B3%95/" />
+<meta property="article:published_time" content="2020-02-29T17:18:32+00:00" />
+<meta property="article:modified_time" content="2020-02-29T17:18:32+00:00" />
+<meta itemprop="name" content="「Old Article」笔记：费马质数检验算法">
+<meta itemprop="description" content="按：这篇文章写于2018年11月27日 An Algorithm for detecting prime number (Primality Test) 1. Fermat’s Little Theorem and its converse-negative proposition Fermat’s Little Theorem is introduced:If ​ is an integer, and ​ is a prime number, then ​ must be one of">
+<meta itemprop="datePublished" content="2020-02-29T17:18:32+00:00" />
+<meta itemprop="dateModified" content="2020-02-29T17:18:32+00:00" />
+<meta itemprop="wordCount" content="355">
+
+
+
+<meta itemprop="keywords" content="学习笔记,数学,算法," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="「Old Article」笔记：费马质数检验算法"/>
+<meta name="twitter:description" content="按：这篇文章写于2018年11月27日 An Algorithm for detecting prime number (Primality Test) 1. Fermat’s Little Theorem and its converse-negative proposition Fermat’s Little Theorem is introduced:If ​ is an integer, and ​ is a prime number, then ​ must be one of"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">狸猫的写作场所</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">狸猫的写作场所</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">「Old Article」笔记：费马质数检验算法</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-02-29 </span>
+        <div class="post-category">
+            <a href="/categories/%E7%90%86%E6%80%A7%E7%9A%84%E5%9C%BA%E6%89%80/"> 理性的场所 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#an-algorithm-for-detecting-prime-number-primality-test">An Algorithm for detecting prime number (Primality Test)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><strong>按：这篇文章写于2018年11月27日</strong></p>
+<h3 id="an-algorithm-for-detecting-prime-number-primality-test">An Algorithm for detecting prime number (Primality Test)</h3>
+<h5 id="1-fermats-little-theorem-and-its-converse-negative-proposition">1. Fermat’s Little Theorem and its converse-negative proposition</h5>
+<ul>
+<li>Fermat’s Little Theorem is introduced:If ​ is an integer, and ​ is a prime number, then ​ must be one of multiples of ​Which means that: ​Then we have:​ Then the commonly used format is:​</li>
+<li>If Fermat’s Little Theorem is true, then we have its converse negative proposition is true:If we have a number ​, and we randomly choose a number ​, if ​, then we know that the number ​ is a prime number. </li>
+</ul>
+<h5 id="2-operation">2. Operation</h5>
+<ul>
+<li>In real operation, we choose a base number, for example, 2, and according to Fermat’s Little Theorem introduced above, we know that if ​, then ​ is very likely to be a prime number.</li>
+<li><strong>But</strong>, the problem is that ​ is not easy to compute,</li>
+<li>To solve this problem, we have:​​</li>
+<li>And we notice that in binary system, we have:​​If we want to find the value of, for example, ​, that is to see if ​ is a prime number, and we find this is too difficult to compute, so we first turn 20 into binary representation: </li>
+</ul>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">bin(20)= 10100
+ ​
+and we can divide it into (2^[1010]_2 %21)^2%21 
+then we compute 2^[1010]_2%21
+then we compute 2^[101]_2%21
+then we compute 2^[101]_2%21= ((2^[10]_2%21)^2*2)%21
+then we compute 2^[1]_2%21
+then we compute (2^[0]%21)^2*2</pre>
+<ul>
+<li>Then we can start from the first number, for example, this question, we start from ‘1’ from ‘10100’: </li>
+</ul>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">k= bin(20)[2:] #'10100'
+length= len(k) #5
+​
+result = 1
+​
+for i in range(0, length):
+   result= result**2%21
+   if k[i]=='1':
+       result= (result* 2)%21</pre><blockquote>
+</blockquote>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Xwithoutcolor</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-02-29
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+          <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+          <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/2020/02/29/old-article%E5%8D%8E%E5%B0%94%E8%A1%97%E8%8B%B1%E8%AF%AD%E6%88%91%E5%9C%A8%E9%95%BF%E5%AE%81%E5%8C%BA%E7%9A%84%E6%B0%B8%E5%8A%AB%E5%9B%9E%E5%BD%92/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">「Old Article」华尔街英语：我在长宁区的永劫回归</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/2020/02/16/book-review-%E5%AD%98%E5%9C%A8%E4%B8%BB%E7%BE%A9%E5%92%96%E5%95%A1%E9%A4%A8%E6%B2%92%E6%9C%89%E6%8F%8F%E8%BF%B0%E5%B0%B1%E6%B2%92%E6%9C%89%E6%84%8F%E7%BE%A9/">
+            <span class="next-text nav-default">Book Review: 「存在主義咖啡館」：沒有描述就沒有意義</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:m@tanuq.cn" class="iconfont icon-email" title="email"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>xwithoutcolor</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        tags: 'ams',
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

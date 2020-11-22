@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stack on 狸猫的写作场所</title>
+    <link>http://localhost:1313/tags/stack/</link>
+    <description>Recent content in Stack on 狸猫的写作场所</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 12 Jul 2020 06:55:25 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/stack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>代替Stack的究竟该是什么</title>
+      <link>http://localhost:1313/2020/07/12/%E4%BB%A3%E6%9B%BFstack%E7%9A%84%E7%A9%B6%E7%AB%9F%E8%AF%A5%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <pubDate>Sun, 12 Jul 2020 06:55:25 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2020/07/12/%E4%BB%A3%E6%9B%BFstack%E7%9A%84%E7%A9%B6%E7%AB%9F%E8%AF%A5%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <description>众所周知，Java当中Stack的实现非常糟糕（至少截至Java 8为止），因为stack和vector的关系应当是composition的关</description>
+    </item>
+    
+  </channel>
+</rss>
