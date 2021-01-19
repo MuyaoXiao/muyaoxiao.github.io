@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on New Water</title>
-    <link>http://muyaoxiao.github.io/posts/</link>
+    <link>https://muyaoxiao.github.io/posts/</link>
     <description>Recent content in Posts on New Water</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://muyaoxiao.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; 2021 &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;C. Wang&lt;/a&gt; and &lt;a href=&#34;https://www.ruiqima.com/&#34;&gt;R. Ma&lt;/a&gt;</copyright><atom:link href="https://muyaoxiao.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello World</title>
-      <link>http://muyaoxiao.github.io/posts/my-first-post/</link>
+      <link>https://muyaoxiao.github.io/posts/my-first-post/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://muyaoxiao.github.io/posts/my-first-post/</guid>
+      <guid>https://muyaoxiao.github.io/posts/my-first-post/</guid>
       <description>New blog, new water ssasasasas</description>
     </item>
     

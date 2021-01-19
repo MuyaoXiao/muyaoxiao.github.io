@@ -3,23 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://muyaoxiao.github.io/categories/</loc>
+    <loc>https://muyaoxiao.github.io/authors/</loc>
   </url>
   
   <url>
-    <loc>http://muyaoxiao.github.io/posts/my-first-post/</loc>
+    <loc>https://muyaoxiao.github.io/categories/</loc>
   </url>
   
   <url>
-    <loc>http://muyaoxiao.github.io/</loc>
+    <loc>https://muyaoxiao.github.io/posts/my-first-post/</loc>
   </url>
   
   <url>
-    <loc>http://muyaoxiao.github.io/posts/</loc>
+    <loc>https://muyaoxiao.github.io/</loc>
   </url>
   
   <url>
-    <loc>http://muyaoxiao.github.io/tags/</loc>
+    <loc>https://muyaoxiao.github.io/posts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://muyaoxiao.github.io/series/</loc>
+  </url>
+  
+  <url>
+    <loc>https://muyaoxiao.github.io/tags/</loc>
   </url>
   
 </urlset>
