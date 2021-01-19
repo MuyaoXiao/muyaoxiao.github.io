@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on New Tanuq</title>
+    <title>Posts on New Water</title>
     <link>http://muyaoxiao.github.io/posts/</link>
-    <description>Recent content in Posts on New Tanuq</description>
+    <description>Recent content in Posts on New Water</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 19 Jan 2021 14:00:00 +0000</lastBuildDate><atom:link href="http://muyaoxiao.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <pubDate>Tue, 19 Jan 2021 14:00:00 +0000</pubDate>
       
       <guid>http://muyaoxiao.github.io/posts/my-first-post/</guid>
-      <description>And go&amp;hellip;</description>
+      <description>New blog, new water</description>
     </item>
     
   </channel>
