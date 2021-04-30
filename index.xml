@@ -6,13 +6,16 @@
         <description>Recent content on New River, New Water</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 19 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://muyaoxiao.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Hello World</title>
+        <lastBuildDate>Fri, 30 Apr 2021 22:59:26 +0800</lastBuildDate><atom:link href="https://muyaoxiao.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>First Post After Migration</title>
         <link>https://muyaoxiao.github.io/posts/my-first-post/</link>
-        <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
+        <pubDate>Fri, 30 Apr 2021 22:59:26 +0800</pubDate>
         
         <guid>https://muyaoxiao.github.io/posts/my-first-post/</guid>
-        <description>&lt;p&gt;This blog has been upgraded from original 「狸猫的写作场所」.&lt;/p&gt;
+        <description>&lt;p&gt;This blog has been migrated from original 「狸猫的写作场所」.&lt;/p&gt;
+&lt;p&gt;This blog will focus on music producing (at least I hope so), my thoughts on programming, and the extension from my &lt;a class=&#34;link&#34; href=&#34;https://www.shuffleshuffle.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;podcast&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;No more theme changing.&lt;/p&gt;
 </description>
         </item>
         
