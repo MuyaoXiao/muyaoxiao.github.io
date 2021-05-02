@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='回过头来看，从马尔可夫不等式到大数定律的推导，乃是概率论到统计学的桥梁。过去一直对这里感到迷茫，但其实稍微整理一下就会很清楚：
+首先是Markov不等式。 它是以俄国数学家Andrey Andreyevich Markov的名字命名，同时也有Markov Chain这个在信息论上著名的东西。这个不等式，简单而言，就是我们可以一个随机变量的期望值判断这个随机变量取值的概率：
+$$P(X \geq a) \leq \dfrac{E[X]}{a} (given \ X \geq 0)$$
+显而易见，随机变量大于更大的(a)的概率会越低。比方说，当​ ( a = E[X] )的时候，我们有​( P(X \geq E[x]) \leq 1 ) , 这句话没有带来任何信息，因为概率必定小于等于1。 但如果( a = 2E[X] )​, 我们可以得到( P(X \geq 2E[X]) \leq 0.5 )​, 也就是说随机变量取值大于等于两倍期望值的概率必然不大于50%. 马尔可夫不等式维基百科上举例也清晰易懂:
+「概率导论」 一书构造了一个随机变量​ (Y_a)来证明这个不等式:
+$$
+\begin{equation}
+Y_a=
+\begin{cases}
+0, (X &amp;lt; a) \
+a, (X \geq a)
+\end{cases}
+\end{equation}
+$$
+那么:
+$$E[Y_a] = P(X &amp;lt; a) * 0 &#43; P(X \geq a) * a = a*P(X \geq a)$$'><title>从马尔可夫不等式到弱大数定律</title>
+
+<link rel='canonical' href='https://muyaoxiao.github.io/2020/01/18/%E4%BB%8E%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%88%B0%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='从马尔可夫不等式到弱大数定律'>
+<meta property='og:description' content='回过头来看，从马尔可夫不等式到大数定律的推导，乃是概率论到统计学的桥梁。过去一直对这里感到迷茫，但其实稍微整理一下就会很清楚：
+首先是Markov不等式。 它是以俄国数学家Andrey Andreyevich Markov的名字命名，同时也有Markov Chain这个在信息论上著名的东西。这个不等式，简单而言，就是我们可以一个随机变量的期望值判断这个随机变量取值的概率：
+$$P(X \geq a) \leq \dfrac{E[X]}{a} (given \ X \geq 0)$$
+显而易见，随机变量大于更大的(a)的概率会越低。比方说，当​ ( a = E[X] )的时候，我们有​( P(X \geq E[x]) \leq 1 ) , 这句话没有带来任何信息，因为概率必定小于等于1。 但如果( a = 2E[X] )​, 我们可以得到( P(X \geq 2E[X]) \leq 0.5 )​, 也就是说随机变量取值大于等于两倍期望值的概率必然不大于50%. 马尔可夫不等式维基百科上举例也清晰易懂:
+「概率导论」 一书构造了一个随机变量​ (Y_a)来证明这个不等式:
+$$
+\begin{equation}
+Y_a=
+\begin{cases}
+0, (X &amp;lt; a) \
+a, (X \geq a)
+\end{cases}
+\end{equation}
+$$
+那么:
+$$E[Y_a] = P(X &amp;lt; a) * 0 &#43; P(X \geq a) * a = a*P(X \geq a)$$'>
+<meta property='og:url' content='https://muyaoxiao.github.io/2020/01/18/%E4%BB%8E%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%88%B0%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B/'>
+<meta property='og:site_name' content='New River, New Water'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='数学' /><meta property='article:tag' content='概率论' /><meta property='article:published_time' content='2020-01-18T19:15:01&#43;00:00'/><meta property='article:modified_time' content='2020-01-18T19:15:01&#43;00:00'/>
+<meta name="twitter:title" content="从马尔可夫不等式到弱大数定律">
+<meta name="twitter:description" content="回过头来看，从马尔可夫不等式到大数定律的推导，乃是概率论到统计学的桥梁。过去一直对这里感到迷茫，但其实稍微整理一下就会很清楚：
+首先是Markov不等式。 它是以俄国数学家Andrey Andreyevich Markov的名字命名，同时也有Markov Chain这个在信息论上著名的东西。这个不等式，简单而言，就是我们可以一个随机变量的期望值判断这个随机变量取值的概率：
+$$P(X \geq a) \leq \dfrac{E[X]}{a} (given \ X \geq 0)$$
+显而易见，随机变量大于更大的(a)的概率会越低。比方说，当​ ( a = E[X] )的时候，我们有​( P(X \geq E[x]) \leq 1 ) , 这句话没有带来任何信息，因为概率必定小于等于1。 但如果( a = 2E[X] )​, 我们可以得到( P(X \geq 2E[X]) \leq 0.5 )​, 也就是说随机变量取值大于等于两倍期望值的概率必然不大于50%. 马尔可夫不等式维基百科上举例也清晰易懂:
+「概率导论」 一书构造了一个随机变量​ (Y_a)来证明这个不等式:
+$$
+\begin{equation}
+Y_a=
+\begin{cases}
+0, (X &amp;lt; a) \
+a, (X \geq a)
+\end{cases}
+\end{equation}
+$$
+那么:
+$$E[Y_a] = P(X &amp;lt; a) * 0 &#43; P(X \geq a) * a = a*P(X \geq a)$$">
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu0252e9e9a080d8f48d100174cea88d3e_18983_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">👀</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://muyaoxiao.github.io">New River, New Water</a></h1>
+        <h2 class="site-description"></h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://muyaoxiao.github.io" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%AC%94%E8%AE%B0/" >
+                笔记
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/2020/01/18/%E4%BB%8E%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%88%B0%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B/">从马尔可夫不等式到弱大数定律</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Jan 18, 2020</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <p>回过头来看，从马尔可夫不等式到大数定律的推导，乃是概率论到统计学的桥梁。过去一直对这里感到迷茫，但其实稍微整理一下就会很清楚：</p>
+<h5 id="首先是markov不等式">首先是Markov不等式。</h5>
+<p>它是以俄国数学家Andrey Andreyevich Markov的名字命名，同时也有Markov Chain这个在信息论上著名的东西。这个不等式，简单而言，就是我们可以一个随机变量的期望值判断这个随机变量取值的概率：</p>
+<p>$$P(X \geq a) \leq \dfrac{E[X]}{a} (given \ X \geq 0)$$</p>
+<p>显而易见，随机变量大于更大的(a)的概率会越低。比方说，当​ ( a = E[X] )的时候，我们有​( P(X \geq E[x]) \leq 1 ) , 这句话没有带来任何信息，因为概率必定小于等于1。 但如果( a = 2E[X] )​, 我们可以得到( P(X \geq 2E[X]) \leq 0.5 )​, 也就是说随机变量取值大于等于两倍期望值的概率必然不大于50%. <a class="link" href="https://zh.wikipedia.org/wiki/%E9%A6%AC%E7%88%BE%E5%8F%AF%E5%A4%AB%E4%B8%8D%E7%AD%89%E5%BC%8F"  target="_blank" rel="noopener"
+    >马尔可夫不等式维基百科</a>上举例也清晰易懂:</p>
+<!-- raw HTML omitted -->
+<p><a class="link" href="https://book.douban.com/subject/26694188/"  target="_blank" rel="noopener"
+    >「概率导论」</a> 一书构造了一个随机变量​ (Y_a)来证明这个不等式:</p>
+<p>$$<br>
+\begin{equation}<br>
+Y_a=<br>
+\begin{cases}<br>
+0, (X &lt; a) \<br>
+a, (X \geq a)<br>
+\end{cases}<br>
+\end{equation}<br>
+$$</p>
+<p>那么:</p>
+<p>$$E[Y_a] = P(X &lt; a) * 0 + P(X \geq a) * a = a*P(X \geq a)$$</p>
+<p>我们考虑到:</p>
+<p>$$<br>
+\quad X &lt; a: X\geq 0 = Y_a ;\<br>
+\quad X \geq a: X\geq a = Y_a;\<br>
+$$</p>
+<p>显而易见, ​( E(X) \geq E(Y_a) )， 而上面又说( E(Y_a)= aP(X\geq a) )​, 所以:</p>
+<p>$$<br>
+aP(X\geq a) = E(Y_a) \leq E(X) \<br>
+P(X \geq a) \leq \dfrac{E(X)}{a}<br>
+$$</p>
+<p>但我们亦容易看出，Markov不等式仅仅用了期望这一个变量进行估计，因此它的上界仍然是保守的。考虑到如果我们也知道随机变量的方差的话，我们可以更准确地对其进行预估，也就是试图把方差(\sigma^2)​引入上述不等式，我们得到了:</p>
+<h5 id="切比雪夫不等式chebyshev8217s-inequality">切比雪夫不等式(Chebyshev’s Inequality).</h5>
+<p>既然试图(\sigma^2)把​带入Markov，我们就应当去思考哪个地方可以写成方差的形式。事实上:</p>
+<p>$$E[(X – E(X) )^2] = \sigma^2$$</p>
+<p>构造一个​(Z)的随机变量，令​( Z = (X – E[X])^2 ), 显然​ (Z)也同时满足大于等于(0)​ 这一条件。我们再写一个关于​的Markov方程：</p>
+<p>$$P(E(Z) \geq a) \leq \dfrac{E[Z]}{a}$$</p>
+<p>考虑到( E[Z] = E[(X – E[X])^2] = \sigma^2 )​, 把上面的式子稍做转换:</p>
+<p>$$P((X-E[X])^2 \geq a) \leq \dfrac{\sigma^2}{a}$$</p>
+<p>如果把​ (a)写作(c^2)​，把(E[X])​记作​(\mu )， 则:</p>
+<p>$$P((X- \mu)^2 \geq c^2) \leq \dfrac{\sigma^2}{c^2}$$</p>
+<p>不要忘了( (X – \mu)^2 \geq c^2 )​等价于( |X – \mu| \geq c )​ , 上述式子可以转化为Chebyshev不等式的标准形式:</p>
+<p>$$P(|X-\mu| \geq c) \leq \dfrac{\sigma^2}{c^2} \qquad(c \geq 0)$$</p>
+<p>它说明了什么呢？在一个我们知晓了期望和方差的随机变量身上，我们可以大致估计它和期望的偏差会是多大的情况。显然，与它的均值偏差越大的概率越小。不过，从上述的推理过程也可知，这两个不等式只是一体两面，无非是下面的不等式知道更多的信息，因此有更精确的结论而已。不难想象，如果我们知道随机变量的模式，我们可以通过这一信息得到更为精确的估计。</p>
+<p>尽管从推理的过程来看它们都是trivial的，但它们依旧在看待事物的方式上给人很大的冲击。从切比雪夫不等式推导而来的大数定理就是一例。</p>
+<h5 id="弱大数定律">弱大数定律</h5>
+<p>有弱大数定律(Weak Law of Large Numbers)，当然也有强大数定律(Strong Law of Large Numbers). 在分析里，极限的定义颇费章节，但从认识论上，这两者给人的直观感受是一致的，也就是对于独立同分布随机变量的样本均值，在大样本的情况下，与随机变量的均值非常接近。弱大数定律于此处有一限定，是说「有很大的概率」与样本均值非常接近。而强大数定律则直言这一概率为1.</p>
+<p>也就是这里，概率论和统计学结合起来了。概率论研究对象乃是理念的，完全的；反过来，统计学的研究对象乃是离散的，残缺的，所谓样本。这一点非常重要，我们最初认识概率往往是从统计的意义上去认识的：我们通过频率去估测和计算概率。我们认为当试验无穷次的时候，概率就是频率。但这样的认知的问题在于，在大数定律之后，我们才可以说频率会趋近与概率这样的结论。比如，我们说硬币正面为的概率为0.5，因为我们认为如果我们进行无数次试验，正面将出现一半次。但这样是不够严谨的，甚至，这样的认知本身就是一种<a class="link" href="https://en.wikipedia.org/wiki/Circular_reasoning"  target="_blank" rel="noopener"
+    >Circular Reasoning（循环论证）</a>？</p>
+<p>事实上，现代概率论的概率的认知乃是自Kolmogorov于1933年基于测度论的公理化结果。</p>
+<p>从切比雪夫到弱大数定律的变换不难理解，在这里我稍加说明:</p>
+<p>有n个独立同分布的变量，分别是( X_1, X_2, X_3 \cdots )​ , 它们的样本均值为:</p>
+<p>$$M_n = \dfrac{1}{n} \sum_i^{n}X_i$$</p>
+<p>那么,​( E[M_n] = \dfrac{1}{n} (E[X_1] + E[X_2] + \cdots + E[X_3]) = \dfrac{1}{n} \sum_{i=1}^{n} E[X_i]= \dfrac{n\mu}{n} = \mu )<br>
+( var(M_n) = \dfrac{1}{n^2} \cdot var(\sum_{n=1}^{n} X_i) = \dfrac{\sum_{i=1}^n var(X_i)}{n^2} = \dfrac{n\sigma^2}{n^2} = \dfrac{\sigma^2}{n} )</p>
+<p>​</p>
+<p>带入Chebyshev不等式，我们有:</p>
+<p>$$P(|M_n – \mu| \geq c) \leq \dfrac{\sigma^2}{nc^2}$$</p>
+<p>对于一个固定的(c)​而言，当​(n) 趋近于无穷大的时候, ( P(|M_n – \mu| \geq c) \leq 0 ). 当然概率不可以为负，也就是说​( P(|M_n -\mu|\geq c) = 0 )：当​趋于无穷大的时候，样本平均值和随机变量期望值的偏差大于任意一个常数的概率都为0. 以上就是我对于弱大数定律的认知，更加严谨的定义和推导应查阅更权威的文本。</p>
+<p>关于在WordPress中显示Latex数学公式参考<a class="link" href="http://www.fanyeong.com/2017/07/21/wordpress-how-to-display-equation/"  target="_blank" rel="noopener"
+    >这里</a>。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+        
+            <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/">概率论</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 New River, New Water
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.3.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
