@@ -33,7 +33,7 @@
 &lt;p&gt;副属和弦之递归：We can still add a chord between C and E7, that is &lt;strong&gt;B7&lt;/strong&gt; (B is the 5th note of E):&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;C -&amp;gt; B7 -&amp;gt; E7 -&amp;gt; Am
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and this trick goes on and on&amp;hellip; Yes! it reminds us of &lt;strong&gt;Circle of 5th(五度圏)&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muyaoxiao.github.io/c5.png&#34; alt=&#34;circle of 5th&#34;  /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://muyaoxiao.github.io/../c5.png&#34; alt=&#34;circle of 5th&#34;  /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;三全音代理tritone-substitution&#34;&gt;三全音代理（Tritone Substitution）&lt;/h3&gt;
 &lt;p&gt;因为我们已经提炼出来Dominant 7th chord的tension来自于它的三全音，我们完全可以保留这个三全音，然后使用其他的和弦。例如G7和弦:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;G B D F
