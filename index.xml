@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Sun, 30 May 2021 18:18:15 +0800</lastBuildDate><atom:link href="https://muyaoxiao.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Tritone, 三全音代理或降二代五和弦</title>
-        <link>https://muyaoxiao.github.io/posts/tritone/tritone/</link>
+        <link>https://muyaoxiao.github.io/posts/tritone/</link>
         <pubDate>Sun, 30 May 2021 18:18:15 +0800</pubDate>
         
-        <guid>https://muyaoxiao.github.io/posts/tritone/tritone/</guid>
+        <guid>https://muyaoxiao.github.io/posts/tritone/</guid>
         <description>&lt;h2 id=&#34;复习时间&#34;&gt;复习时间&lt;/h2&gt;
 &lt;h3 id=&#34;ii-v-i&#34;&gt;II-&amp;gt;V-&amp;gt;I&lt;/h3&gt;
 &lt;p&gt;五级和弦（特别是属七和弦）有强烈的趋势接到一级和弦，最常见的&lt;strong&gt;C&lt;/strong&gt;大调progression:&lt;/p&gt;
@@ -33,7 +33,18 @@
 &lt;p&gt;副属和弦之递归：We can still add a chord between C and E7, that is &lt;strong&gt;B7&lt;/strong&gt; (B is the 5th note of E):&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;C -&amp;gt; B7 -&amp;gt; E7 -&amp;gt; Am
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and this trick goes on and on&amp;hellip; Yes! it reminds us of &lt;strong&gt;Circle of 5th(五度圏)&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://muyaoxiao.github.io/c5.png&#34; alt=&#34;circle of 5th&#34;  /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style=&#34;flex-grow: 100; flex-basis: 240px&#34;&gt;
+		&lt;a href=&#34;https://muyaoxiao.github.io/posts/tritone/c5.png&#34; data-size=&#34;1200x1200&#34;&gt;&lt;img src=&#34;https://muyaoxiao.github.io/posts/tritone/c5.png&#34;
+				srcset=&#34;https://muyaoxiao.github.io/posts/tritone/c5_hu5f765df6b29321f84f318c6d9b91b2fe_176131_480x0_resize_box_2.png 480w, https://muyaoxiao.github.io/posts/tritone/c5_hu5f765df6b29321f84f318c6d9b91b2fe_176131_1024x0_resize_box_2.png 1024w&#34;
+				width=&#34;1200&#34;
+				height=&#34;1200&#34;
+				loading=&#34;lazy&#34;
+				alt=&#34;circle of 5th&#34;&gt;
+		&lt;/a&gt;
+		
+		&lt;figcaption&gt;circle of 5th&lt;/figcaption&gt;
+		
+	&lt;/figure&gt;&lt;/p&gt;
 &lt;h3 id=&#34;三全音代理tritone-substitution&#34;&gt;三全音代理（Tritone Substitution）&lt;/h3&gt;
 &lt;p&gt;因为我们已经提炼出来Dominant 7th chord的tension来自于它的三全音，我们完全可以保留这个三全音，然后使用其他的和弦。例如G7和弦:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;G B D F
