@@ -6,7 +6,57 @@
         <description>Recent content on New River, New Water</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 06 May 2021 21:27:12 +0800</lastBuildDate><atom:link href="https://muyaoxiao.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 30 May 2021 18:18:15 +0800</lastBuildDate><atom:link href="https://muyaoxiao.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Tritone, 三全音代理或降二代五和弦</title>
+        <link>https://muyaoxiao.github.io/posts/tritone/</link>
+        <pubDate>Sun, 30 May 2021 18:18:15 +0800</pubDate>
+        
+        <guid>https://muyaoxiao.github.io/posts/tritone/</guid>
+        <description>&lt;h2 id=&#34;复习时间&#34;&gt;复习时间&lt;/h2&gt;
+&lt;h3 id=&#34;ii-v-i&#34;&gt;II-&amp;gt;V-&amp;gt;I&lt;/h3&gt;
+&lt;p&gt;五级和弦（特别是属七和弦）有强烈的趋势接到一级和弦，最常见的&lt;strong&gt;C&lt;/strong&gt;大调progression:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Dm -&amp;gt; G7 -&amp;gt; C
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;从和弦级数上来说就是&lt;strong&gt;II&lt;/strong&gt; -&amp;gt; &lt;strong&gt;V&lt;/strong&gt; -&amp;gt; &lt;strong&gt;I&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;因此从功能和声的角度来说，V是I的&lt;strong&gt;Dominant Chord(属和弦)&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;why&#34;&gt;Why&lt;/h3&gt;
+&lt;p&gt;因为属和弦有非常不稳定的组合。&lt;/p&gt;
+&lt;p&gt;Take &lt;strong&gt;G7&lt;/strong&gt; chord for an example. It is composed of:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;G, B, D, F
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and between &lt;strong&gt;B&lt;/strong&gt; and &lt;strong&gt;F&lt;/strong&gt; is &lt;strong&gt;6 halftone&lt;/strong&gt;, that is &lt;strong&gt;3 whole tone&lt;/strong&gt;, and it sounds so discordant &amp;ndash; which makes us have a strong motivation to solve it to &lt;strong&gt;Tonic Chord&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Here we get the name: &lt;strong&gt;Tritone&lt;/strong&gt; (that is 3 whole tone).&lt;/p&gt;
+&lt;h2 id=&#34;用法&#34;&gt;用法&lt;/h2&gt;
+&lt;h3 id=&#34;副属和弦-secondery-dominant-chord&#34;&gt;副属和弦 (Secondery Dominant Chord)&lt;/h3&gt;
+&lt;p&gt;In my understanding, the so-called &lt;strong&gt;Secondary Dominant Chord&lt;/strong&gt; is the dominant chord of any chord. 我们把要到的和弦当作一级和弦，那它上面的五级和弦就是它的副属和弦。&lt;/p&gt;
+&lt;p&gt;For example, next progression:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;C -&amp;gt; E7 -&amp;gt; Am
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;E&lt;/strong&gt; is the 5th note of &lt;strong&gt;A&lt;/strong&gt;, so &lt;strong&gt;E7&lt;/strong&gt; is the dominant 7th chord of &lt;strong&gt;Am&lt;/strong&gt;. 注意这里E7并不是C大调的和弦，也就是说，我们通过使用属和弦使用了一个离调的和弦。&lt;/p&gt;
+&lt;p&gt;副属和弦之递归：We can still add a chord between C and E7, that is &lt;strong&gt;B7&lt;/strong&gt; (B is the 5th note of E):&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;C -&amp;gt; B7 -&amp;gt; E7 -&amp;gt; Am
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and this trick goes on and on&amp;hellip; Yes! it reminds us of &lt;strong&gt;Circle of 5th(五度圏)&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://muyaoxiao.github.io/c5.png&#34; alt=&#34;circle of 5th&#34;  /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;三全音代理tritone-substitution&#34;&gt;三全音代理（Tritone Substitution）&lt;/h3&gt;
+&lt;p&gt;因为我们已经提炼出来Dominant 7th chord的tension来自于它的三全音，我们完全可以保留这个三全音，然后使用其他的和弦。例如G7和弦:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;G B D F
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;我们保留它三全音的结构&lt;strong&gt;B F&lt;/strong&gt;, 使用另外的和弦，比如&lt;strong&gt;Db7&lt;/strong&gt;和弦：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Db F Ab Cb(B)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;因此我们可以使用&lt;strong&gt;Db7&lt;/strong&gt; 去替代 &lt;strong&gt;G7&lt;/strong&gt;，也就是说&lt;strong&gt;Db7&lt;/strong&gt; 也会有强烈的解决到 &lt;strong&gt;C&lt;/strong&gt;的动机。&lt;/p&gt;
+&lt;p&gt;一个规律是三全音代理的和弦是目标和弦的高半音的Dominant 7th, 所以我们可以很快找到这样的一些选择：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Dm7 -&amp;gt; G7 -&amp;gt; CMaj7
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;我们可以在每一个和弦的前面接上它的三全音代理：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(Eb7) -&amp;gt; Dm7 -&amp;gt; (Ab7) -&amp;gt; G7 -&amp;gt; (Db7) -&amp;gt; CMaj7 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这个trick也被称为&lt;strong&gt;替代属和弦&lt;/strong&gt;，或者&lt;strong&gt;降二代五&lt;/strong&gt;（降二即高半音，代五指替代属和弦）。&lt;/p&gt;
+&lt;h2 id=&#34;ref&#34;&gt;ref:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=Wdn1acmup5g&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;很酷炫的「三全音代理」和弦！&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/41952075&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;一招让你的属和弦与众不同——降二代五怎么用！&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.chipinkaiyajazz.com/2019/01/blog-post_30.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;一個降二代五 各自表述 - 爵士樂與黑樂中的表現方式不盡相同&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Note for TOXIC breakdown</title>
         <link>https://muyaoxiao.github.io/posts/toxic/</link>
         <pubDate>Thu, 06 May 2021 21:27:12 +0800</pubDate>
