@@ -37,5 +37,17 @@ Podcast:  Official Website: ShuffleShuffle|随机掉落 Listen on: Apple podcast
  </description>
     </item>
     
+    <item>
+      <title>Donate</title>
+      <link>https://muyaoxiao.github.io/donate/</link>
+      <pubDate>Fri, 30 Apr 2021 22:59:26 +0800</pubDate>
+      
+      <guid>https://muyaoxiao.github.io/donate/</guid>
+      <description>如果你喜欢我的文章并愿意为此捐赠，你有以下方式可以选择：
+1. 支付宝 (5元):
+![alipay](alipay.jpg)  2. 微信（5元）:
+![wechat](wechat.jpg) </description>
+    </item>
+    
   </channel>
 </rss>
